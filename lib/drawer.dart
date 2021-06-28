@@ -1,15 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app_burclar/oneri_sayfasi.dart';
 
 class Drawer_yorum extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      elevation: 0,
+      elevation: 1,
       child: Container(
         decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("assets/images/drawerbg.jpg"),
+              fit: BoxFit.cover),
           gradient: LinearGradient(
-              colors: [Colors.purple, Colors.deepPurple],
+              colors: [Colors.black87, Colors.deepPurple],
               begin: Alignment.bottomRight,
               end: Alignment.topLeft),
         ),
@@ -19,6 +23,10 @@ class Drawer_yorum extends StatelessWidget {
             Container(
               height: 100,
               decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      colors: [Colors.black54, Colors.deepPurple, Colors.grey],
+                      begin: Alignment.bottomRight,
+                      end: Alignment.topLeft),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black,
@@ -46,7 +54,12 @@ class Drawer_yorum extends StatelessWidget {
               ikonadi: "GÜNLÜK TAVSİYE",
               ikon_fonksiyonu: () {
                 print("Günlük tavsiye");
-                Navigator.pushNamed(context, "oneri");
+                var route = new MaterialPageRoute(
+                  builder: (BuildContext context) => new Oneri(
+                    data: "günlük tavsiyesi",
+                  ),
+                );
+                Navigator.of(context).push(route);
               },
             ),
             SizedBox(
@@ -57,6 +70,12 @@ class Drawer_yorum extends StatelessWidget {
               ikonadi: "PARA TAVSİYESİ",
               ikon_fonksiyonu: () {
                 print("Para tavsiye");
+                var route = new MaterialPageRoute(
+                  builder: (BuildContext context) => new Oneri(
+                    data: "para tavsiyesi",
+                  ),
+                );
+                Navigator.of(context).push(route);
               },
             ),
             SizedBox(
@@ -67,6 +86,12 @@ class Drawer_yorum extends StatelessWidget {
               ikonadi: "AŞK TAVSİYESİ",
               ikon_fonksiyonu: () {
                 print("Aşk tavsiye");
+                var route = new MaterialPageRoute(
+                  builder: (BuildContext context) => new Oneri(
+                    data: "aşk tavsiyesi",
+                  ),
+                );
+                Navigator.of(context).push(route);
               },
             ),
           ],

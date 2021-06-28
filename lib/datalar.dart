@@ -1,6 +1,6 @@
 class Burc_ozellikleri {
   String baslik;
-
+  Burc_ozellikleri({this.baslik});
   Map<String, String> yorumlar = {
     "Balık": "Akıllıdır",
     "Koç": "kafadırr",
@@ -45,6 +45,12 @@ class Burc_ozellikleri {
     "Başak": "Başak yan bilgisi",
     "Oğlak": "Oğlak yan bilgisi"
   };
+}
 
-  Burc_ozellikleri({this.baslik});
+class Tavsiyeler {
+  Map<String, String> tavsiye = {
+    "aşk tavsiyesi": "Aşk tavsiyesi veren yazı",
+    "para tavsiyesi": "Para tavsiyesi veren yazı",
+    "günlük tavsiyesi": "Günlük tavsiye veren yazı"
+  };
 }

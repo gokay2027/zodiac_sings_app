@@ -27,12 +27,13 @@ class burc_sablon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Burç ve Fal",
       initialRoute: "/",
       routes: {
         "/": (context) => ilk_sayfa(),
         "second": (context) => ikinci_sayfa(),
-        "oneri": (context) => oneri(),
+        "oneri": (context) => Oneri(),
       },
     );
   }
